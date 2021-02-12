@@ -1,0 +1,106 @@
+
+<app-layout>
+    
+    
+        
+    <div class="row">
+
+        <div class="open-status" *ngFor="let booking of hotels">
+          <mat-card class="example-card" *ngIf="!booking.checkoutStatus">
+            <mat-card-header>
+             </mat-card-header>
+            <mat-card-content>
+              
+    
+            <div class="row">
+              <div class="col-md-3">
+                  <img src="assets/hotel/{{booking.hotel.imgPath}}" class="responsive">
+              </div>
+              <div class="col-md-6 ">
+                  <div class="list-title">
+                      <ol class="list-inline list-unstyled">
+                      <li class="list-inline-item"><a href="#"><h4>{{booking.hotel.name}}</h4></a></li>
+                      <!-- <li class="list-inline-item text-warning" *ngFor="let  in  counter(hotel.star) ;let i = index">
+                          
+                        <i class="fa fa-star"></i>
+                       <i class="fa fa-star-half"></i></li>
+                      </li> -->
+                  </ol>
+                </div>
+                  <div class="list-descrip">
+                    <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                    <p><small>{{booking.hotel.address}}</small> </p>
+                    <p><b>ArrivalDate:</b>{{booking.arrivalDate}}</p>
+                    <p><b>Rooms:</b>{{booking.rooms}}</p>
+                     </div>
+                  
+              </div>
+              <div class="col-md-3 border-left card-body">
+                  <ul class="list-unstyled">
+                      <li><h3><b>{{booking.hotel.overAllReview}}</b></h3></li>
+                      <li class="text-secondary"><small>{{booking.hotel.totalReviews}} Reviews  </small></li>
+                  </ul>
+    
+                  <button type="button" *ngIf="!booking.checkoutStatus" class="btn btn-outline-primary" (click)="checkOut(booking.id)">Check Out</button>
+                  <button type="button" *ngIf="booking.checkoutStatus" class="btn btn-danger" disabled>Closed</button>
+                  
+              </div>
+          </div>
+    
+            </mat-card-content>
+          </mat-card>
+    
+
+        </div>
+    
+        <div class="open-status" *ngFor="let booking of hotels">
+          <mat-card class="example-card" *ngIf="booking.checkoutStatus">
+            <mat-card-header>
+             </mat-card-header>
+            <mat-card-content>
+              
+    
+            <div class="row">
+              <div class="col-md-3">
+                  <img src="assets/hotel/{{booking.hotel.imgPath}}" class="responsive">
+              </div>
+              <div class="col-md-6 ">
+                  <div class="list-title">
+                      <ol class="list-inline list-unstyled">
+                      <li class="list-inline-item"><a href="#"><h4>{{booking.hotel.name}}</h4></a></li>
+                      <!-- <li class="list-inline-item text-warning" *ngFor="let  in  counter(hotel.star) ;let i = index">
+                          
+                        <i class="fa fa-star"></i>
+                       <i class="fa fa-star-half"></i></li>
+                      </li> -->
+                  </ol>
+                </div>
+                  <div class="list-descrip">
+                    <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                    <p><small>{{booking.hotel.address}}</small> </p>
+                    <p><b>ArrivalDate:</b>{{booking.arrivalDate}}</p>
+                    <p><b>Rooms:</b>{{booking.rooms}}</p>
+                     </div>
+                  
+              </div>
+              <div class="col-md-3 border-left card-body">
+                  <ul class="list-unstyled">
+                      <li><h3><b>{{booking.hotel.overAllReview}}</b></h3></li>
+                      <li class="text-secondary"><small>{{booking.hotel.totalReviews}} Reviews  </small></li>
+                  </ul>
+    
+                  <button type="button" *ngIf="!booking.checkoutStatus" class="btn btn-outline-primary" (click)="checkOut(booking.id)">Check Out</button>
+                  <button type="button" *ngIf="booking.checkoutStatus" class="btn btn-danger" disabled>Closed</button>
+                  
+              </div>
+          </div>
+    
+            </mat-card-content>
+          </mat-card>
+    
+
+        </div>
+    
+</div>
+
+</app-layout>

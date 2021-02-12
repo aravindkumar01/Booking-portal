@@ -1,0 +1,27 @@
+.content{
+    margin-left:10px ;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.heading{
+
+    font-size: 19px;
+    color:#a8a8a8;
+}
+
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }

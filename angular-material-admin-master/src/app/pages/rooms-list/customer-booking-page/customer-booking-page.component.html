@@ -1,0 +1,233 @@
+
+
+<app-layout>
+    
+    <mat-card>
+
+    <div class="condainer">
+        <h5>Booking Details</h5>
+
+
+        
+        <div class="row">
+          <div class="col-md-3">
+              <img src="assets/hotel/{{hotel.imgPath}}" class="responsive">
+          </div>
+          <div class="col-md-6 ">
+              <div class="list-title">
+                  <ol class="list-inline list-unstyled">
+                  <li class="list-inline-item"><a href="#"><h4>{{hotel.name}}</h4></a></li>
+                  <!-- <li class="list-inline-item text-warning" *ngFor="let  in  counter(hotel.star) ;let i = index">
+                      
+                    <i class="fa fa-star"></i>
+                   <i class="fa fa-star-half"></i></li>
+                  </li> -->
+              </ol>
+            </div>
+              <div class="list-descrip">
+                <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                <small>{{hotel.address}}</small>  
+              </div>
+              
+              
+              
+          </div>
+          <!-- <div class="col-md-3 border-left card-body">
+              <ul class="list-unstyled">
+                  <li><h3><b>{{hotel.overAllReview}}</b></h3></li>
+                  <li class="text-secondary"><small>{{hotel.totalReviews}} Reviews  </small></li>
+              </ul>
+              <button type="button" class="btn btn-outline-primary" (click)="gotoBooking(hotel.id)">Book Now</button>
+          </div> -->
+      </div>
+      <br><br>
+        <div class="row">
+
+          <div class="col-sm-8">
+              <div class="example-container ">
+                  <mat-form-field appearance="fill" class="col-sm-12">
+                    <mat-label>Name</mat-label>
+                    <input matInput required class="col-sm-12" [(ngModel)]="booking.name">
+                    <!-- <mat-hint>Include area code</mat-hint> -->
+                  </mat-form-field>
+              </div>
+
+           </div>
+
+           <div class="col-sm-4">
+              <div class="example-container ">
+                  <mat-form-field appearance="fill" class="col-sm-12">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" required class="col-sm-12" [(ngModel)]="booking.email">
+                    <!-- <mat-hint>Include area code</mat-hint> -->
+                  </mat-form-field>
+              </div>
+
+           </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-4">
+            <div class="example-container ">
+                <mat-form-field appearance="fill" class="col-sm-12">
+                  <mat-label>Phone</mat-label>
+                  <input matInput required class="col-sm-12" [(ngModel)]="booking.phone">
+                  <!-- <mat-hint>Include area code</mat-hint> -->
+                </mat-form-field>
+            </div>
+
+         </div>
+
+         <div class="col-sm-4">
+            <div class="example-container ">
+                <mat-form-field appearance="fill" class="col-sm-12">
+                  <mat-label>Arival Date</mat-label>
+                  <input matInput required class="col-sm-12" type="date"  (change)="getRooms()" [(ngModel)]="booking.arrivalDate">
+                  <!-- <mat-hint>Include area code</mat-hint> -->
+                </mat-form-field>
+            </div>
+
+         </div>
+         <div class="col-sm-4">
+          <div class="example-container ">
+              <mat-form-field appearance="fill" class="col-sm-12">
+                <mat-label>Avalible Rooms</mat-label>
+                <input matInput required class="col-sm-12"  [(ngModel)]="count">
+                <!-- <mat-hint>Include area code</mat-hint> -->
+              </mat-form-field>
+          </div>
+
+       </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-4">
+        <div class="example-container ">
+            <mat-form-field appearance="fill" class="col-sm-12">
+              <mat-label>Booking Rooms</mat-label>
+              <input matInput required class="col-sm-12" type="number" [(ngModel)]="booking.rooms">
+              
+            </mat-form-field>
+            <p style="color:red;">{{status}}</p>
+        </div>
+
+     </div>
+
+      <div class="col-sm-4">
+          <div class="example-container ">
+              <mat-form-field appearance="fill" class="col-sm-12">
+                <mat-label>Number of Adults</mat-label>
+                <input matInput required class="col-sm-12" type="number" [(ngModel)]="booking.adults">
+                <!-- <mat-hint>Include area code</mat-hint> -->
+              </mat-form-field>
+          </div>
+
+       </div>
+
+       <div class="col-sm-4">
+          <div class="example-container ">
+              <mat-form-field appearance="fill" class="col-sm-12">
+                <mat-label>Nuber of child</mat-label>
+                <input matInput required class="col-sm-12" type="number"  [(ngModel)]="booking.children">
+                <!-- <mat-hint>Include area code</mat-hint> -->
+              </mat-form-field>
+          </div>
+
+       </div>
+       
+
+  </div>
+                
+
+          <!-- <h5>Address Information</h5>
+
+            <div class="row">
+
+                <div class="col-sm-8">
+                    <div class="example-container ">
+                        <mat-form-field appearance="fill" class="col-sm-12">
+                          <mat-label>Street Address Line 1</mat-label>
+                          <input matInput required class="col-sm-12">
+                        
+                        </mat-form-field>
+                    </div>
+
+                 </div>
+
+                 <div class="col-sm-4">
+                    <div class="example-container ">
+                        <mat-form-field appearance="fill" class="col-sm-12">
+                          <mat-label>Country</mat-label>
+                          <input matInput required class="col-sm-12">
+                          
+                        </mat-form-field>
+                    </div>
+
+                 </div>
+
+            </div>
+            
+
+            <div class="row">
+
+                <div class="col-sm-8">
+                    <div class="example-container ">
+                        <mat-form-field appearance="fill" class="col-sm-12">
+                          <mat-label>Street Address Line 2</mat-label>
+                          <input matInput required class="col-sm-12">
+                        </mat-form-field>
+                    </div>
+
+                 </div>
+
+                 <div class="col-sm-4">
+                    <div class="example-container ">
+                        <mat-form-field appearance="fill" class="col-sm-12">
+                          <mat-label>Region/State</mat-label>
+                          <input matInput required class="col-sm-12">
+                        </mat-form-field>
+                    </div>
+
+                 </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-4">
+                    <div class="example-container ">
+                        <mat-form-field appearance="fill" class="col-sm-12">
+                          <mat-label>City</mat-label>
+                          <input matInput required class="col-sm-12">
+                         
+                        </mat-form-field>
+                    </div>
+
+                 </div>
+
+                 <div class="col-sm-4">
+                    <div class="example-container ">
+                        <mat-form-field appearance="fill" class="col-sm-12">
+                          <mat-label>Zip/Pin Code</mat-label>
+                          <input matInput required class="col-sm-12">
+                         
+                        </mat-form-field>
+                    </div>
+
+                 </div>
+
+            </div>
+
+            
+    </div> -->
+
+    
+    <button type="button" class="btn btn-outline-primary" (click)="bookRoom()">Book Now</button>
+   </div>
+
+    </mat-card>
+    </app-layout>

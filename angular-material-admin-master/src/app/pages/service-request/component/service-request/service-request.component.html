@@ -1,0 +1,646 @@
+
+<app-layout>
+
+    <div class="row">
+
+        <div class="col-sm-3 first-div">      
+           <div class="content">   
+                    <h5>Generate Service Request</h5>
+                    <p>Enter Details to get quotation based on the requirments.Post submission you will be contacted by our sales teams</p>
+            </div>    
+        </div>
+        <div class="col-sm-9">
+
+
+        <mat-card>
+           
+            <mat-horizontal-stepper>
+                <mat-step label="Contact Info" state="phone">
+
+
+                    <div class="condainer">
+                        <h5>Contact Information</h5>
+
+                        <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="example-container">
+                                        <mat-form-field appearance="fill">
+                                          <mat-label>Name</mat-label>
+                                          <input matInput required>
+                                          <!-- <mat-hint>Include area code</mat-hint> -->
+                                        </mat-form-field>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="example-container">
+                                        <mat-form-field appearance="fill">
+                                          <mat-label>10 Digit Mobile Number</mat-label>
+                                          <input matInput required>
+                                          <!-- <mat-hint>Include area code</mat-hint> -->
+                                        </mat-form-field>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="example-container">
+                                        <mat-form-field appearance="fill">
+                                          <mat-label>Email Address</mat-label>
+                                          <input matInput required>
+                                          <!-- <mat-hint>Include area code</mat-hint> -->
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+
+                        </div>
+                            <!-- end row -->
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="example-container ">
+                                    <mat-form-field appearance="fill">
+                                      <mat-label>Company/organization name</mat-label>
+                                      <input matInput required class="col-sm-4">
+                                      <!-- <mat-hint>Include area code</mat-hint> -->
+                                    </mat-form-field>
+                                </div>
+
+                             </div>
+                         </div>
+                          <!-- end row -->
+
+
+                          <h5>Address Information</h5>
+
+                            <div class="row">
+
+                                <div class="col-sm-8">
+                                    <div class="example-container ">
+                                        <mat-form-field appearance="fill" class="col-sm-12">
+                                          <mat-label>Street Address Line 1</mat-label>
+                                          <input matInput required class="col-sm-12">
+                                          <!-- <mat-hint>Include area code</mat-hint> -->
+                                        </mat-form-field>
+                                    </div>
+    
+                                 </div>
+
+                                 <div class="col-sm-4">
+                                    <div class="example-container ">
+                                        <mat-form-field appearance="fill" class="col-sm-12">
+                                          <mat-label>Country</mat-label>
+                                          <input matInput required class="col-sm-12">
+                                          <!-- <mat-hint>Include area code</mat-hint> -->
+                                        </mat-form-field>
+                                    </div>
+    
+                                 </div>
+
+                            </div>
+                            <!-- end row -->
+
+                            <div class="row">
+
+                                <div class="col-sm-8">
+                                    <div class="example-container ">
+                                        <mat-form-field appearance="fill" class="col-sm-12">
+                                          <mat-label>Street Address Line 2</mat-label>
+                                          <input matInput required class="col-sm-12">
+                                          <!-- <mat-hint>Include area code</mat-hint> -->
+                                        </mat-form-field>
+                                    </div>
+    
+                                 </div>
+
+                                 <div class="col-sm-4">
+                                    <div class="example-container ">
+                                        <mat-form-field appearance="fill" class="col-sm-12">
+                                          <mat-label>Region/State</mat-label>
+                                          <input matInput required class="col-sm-12">
+                                          <!-- <mat-hint>Include area code</mat-hint> -->
+                                        </mat-form-field>
+                                    </div>
+    
+                                 </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-sm-4">
+                                    <div class="example-container ">
+                                        <mat-form-field appearance="fill" class="col-sm-12">
+                                          <mat-label>City</mat-label>
+                                          <input matInput required class="col-sm-12">
+                                          <!-- <mat-hint>Include area code</mat-hint> -->
+                                        </mat-form-field>
+                                    </div>
+    
+                                 </div>
+
+                                 <div class="col-sm-4">
+                                    <div class="example-container ">
+                                        <mat-form-field appearance="fill" class="col-sm-12">
+                                          <mat-label>Zip/Pin Code</mat-label>
+                                          <input matInput required class="col-sm-12">
+                                          <!-- <mat-hint>Include area code</mat-hint> -->
+                                        </mat-form-field>
+                                    </div>
+    
+                                 </div>
+
+                            </div>
+
+                            <!-- end row -->
+                    </div>
+
+
+
+                
+                  <div>
+                    <button mat-raised-button color="primary" matStepperNext>Next</button>
+                  </div>
+                </mat-step>
+
+
+                <mat-step label="Environment Info" state="account_circle">
+                 
+                  <h5>Environment Information</h5>
+                      <div class="row">
+                          
+                        <div class="col-sm-4">
+                          <div class="example-container ">
+                              <mat-form-field appearance="fill" class="col-sm-12">
+                                <mat-label>What is installed or pending installation?</mat-label>
+                                <input matInput required class="col-sm-12">
+                                <!-- <mat-hint>Include area code</mat-hint> -->
+                              </mat-form-field>
+                          </div>
+
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="example-container ">
+                              <mat-form-field appearance="fill" class="col-sm-12">
+                                <mat-label>Partner name</mat-label>
+                                <input matInput required class="col-sm-12">
+                                <!-- <mat-hint>Include area code</mat-hint> -->
+                              </mat-form-field>
+                          </div>
+
+                       </div>
+                       <div class="col-sm-4">
+                          <div class="example-container ">
+                                <p>Remote Working
+                                  <mat-icon aria-hidden="false" aria-label="Example home icon">contact_support</mat-icon>
+                                </p>
+                                                            
+                                  <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button value="yes">Yes</mat-radio-button>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <mat-radio-button value="no">No</mat-radio-button>
+                                  </mat-radio-group>
+                              
+                            </div>
+
+                          </div>
+
+
+                          <div class="col-sm-4">
+                            <div class="example-container ">
+                                <mat-form-field appearance="fill" class="col-sm-12">
+                                  <mat-label>Partner Contact Info</mat-label>
+                                  <input matInput required class="col-sm-12">
+                                  <!-- <mat-hint>Include area code</mat-hint> -->
+                                </mat-form-field>
+                            </div>
+  
+                          </div>
+                          <div class="col-sm-4">
+                            <div class="example-container ">
+                                
+                                <mat-form-field appearance="fill">
+                                  <mat-label>Project Data For Closing Deal</mat-label>
+                                  <input matInput [matDatepicker]="picker">
+                                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                  <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+  
+                         </div>
+                         <div class="col-sm-4">
+                            <div class="example-container ">
+                                  <p>Post-migaration data scrubbing
+                                    <mat-icon aria-hidden="false" aria-label="Example home icon">contact_support</mat-icon>
+                                  </p>
+                                                              
+                                    <mat-radio-group aria-label="Select an option">
+                                      <mat-radio-button value="yes">Yes</mat-radio-button>
+                                      &nbsp;&nbsp;&nbsp;
+                                      <mat-radio-button value="no">No</mat-radio-button>
+                                    </mat-radio-group>
+                                
+                              </div>
+  
+                            </div>
+                      </div>
+
+                      <br><br>
+                    <div class="row">
+                     <div class="col-sm-8">
+                      <div class="example-container">
+                          <mat-form-field class="example-full-width col-sm-12" appearance="fill">
+                            <mat-label>If SAN switch fabric, is there any change on the swtich infrastrcture?</mat-label>
+                            <textarea  #message maxlength="1000" rows="5" cols="40" matInput placeholder="Explain Here..."></textarea>
+                            <mat-hint align="end">{{message.value.length}} / 1000</mat-hint>
+                          </mat-form-field>
+                        </div>
+
+                     </div>  <!-- text area end -->
+                      <div class="col-sm-4">
+                          
+                        <mat-form-field appearance="fill">                          
+                          <input matInput type="number">
+                          <span matPrefix>
+                            <mat-icon aria-hidden="false" class="icon" aria-label="Example home icon">add</mat-icon>
+                           &nbsp;</span>
+                          <mat-icon matSuffix>
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon">remove</mat-icon>
+                          </mat-icon>
+                          <mat-hint align="end">Max. #of Migaration Events</mat-hint>
+                        </mat-form-field>
+
+                     </div>
+                    </div>
+
+                <div  class="row">
+                    <div class="col-sm-4">
+
+                      <mat-form-field appearance="fill" >
+                        <mat-label>Outage Windows</mat-label>
+                        <select matNativeControl required>
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="example-container ">
+                                
+                        <mat-form-field appearance="fill">
+                          <mat-label>Freeze Window Date</mat-label>
+                          <input matInput [matDatepicker]="picker1" required>
+                          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                          <mat-datepicker #picker1></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+
+                    </div>
+                    <div class="col-sm-4">
+
+                      <div class="example-container ">
+                        <p>Freeze Windows
+                          <mat-icon aria-hidden="false" aria-label="Example home icon">contact_support</mat-icon>
+                        </p>
+                                                    
+                          <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button value="yes">Yes</mat-radio-button>
+                            &nbsp;&nbsp;&nbsp;
+                            <mat-radio-button value="no">No</mat-radio-button>
+                          </mat-radio-group>
+                      
+                    </div>
+
+                    </div>
+
+                </div>
+
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-3">
+                        <button  mat-raised-button color="primary"  matStepperPrevious>Back</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button  mat-raised-button color="primary"  matStepperNext>Next</button>
+                    </div>
+                   
+                  </div>
+                </mat-step>
+
+
+
+                <mat-step label="Site Info">
+                    
+                  <h5>Site Information</h5>
+
+                  <div class="row first-row">
+                          
+                    <div class="col-sm-4">
+                      <div class="example-container ">
+                          <mat-form-field appearance="fill" class="col-sm-12">
+                            <mat-label>Site Name</mat-label>
+                            <input matInput required class="col-sm-12">
+                            <!-- <mat-hint>Include area code</mat-hint> -->
+                          </mat-form-field>
+                      </div>
+
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="example-container ">
+                          <mat-form-field appearance="fill" class="col-sm-12">
+                            <mat-label>Site Address</mat-label>
+                            <input matInput required class="col-sm-12">
+                            <!-- <mat-hint>Include area code</mat-hint> -->
+                          </mat-form-field>
+                      </div>
+
+                   </div>
+                   <div class="col-sm-4">
+                      <div class="example-container ">
+                            <p>Stroage virtualation
+                              <mat-icon aria-hidden="false" aria-label="Example home icon">contact_support</mat-icon>
+                            </p>
+                                                        
+                              <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button value="yes">Yes</mat-radio-button>
+                                &nbsp;&nbsp;&nbsp;
+                                <mat-radio-button value="no">No</mat-radio-button>
+                              </mat-radio-group>
+                          
+                        </div>
+
+                      </div>
+                  </div>
+
+                  <div class="row sec-row">
+                          
+                    <div class="col-sm-4">
+                      <div class="example-container ">
+                          <mat-form-field appearance="fill" class="col-sm-12">
+                            <mat-label>Enter Source Array (Vendor & Model)</mat-label>
+                            <input matInput required class="col-sm-12">
+                            <!-- <mat-hint>Include area code</mat-hint> -->
+                          </mat-form-field>
+                      </div>
+
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="example-container col-sm-12">
+                        <mat-form-field appearance="fill">
+                          <mat-label>Destination Site</mat-label>
+                          <select matNativeControl required>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                          </select>
+                        </mat-form-field>
+                      </div>
+
+                   </div>
+                   <div class="col-sm-4">
+                      <div class="example-container ">
+                            <p>Connection b/w Source&Destination
+                              <mat-icon aria-hidden="false" aria-label="Example home icon">contact_support</mat-icon>
+                            </p>
+                                                        
+                              <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button value="yes">Yes</mat-radio-button>
+                                &nbsp;&nbsp;&nbsp;
+                                <mat-radio-button value="no">No</mat-radio-button>
+                              </mat-radio-group>
+                          
+                        </div>
+
+                      </div>
+                  </div>
+
+                  <div class="row thrid-row">
+                          
+                    <div class="col-sm-4">
+                      <div class="example-container ">
+                          <mat-form-field appearance="fill" class="col-sm-12">
+                            <mat-label>Enter Source Array (Vendor & Model)</mat-label>
+                            <input matInput required class="col-sm-12">
+                            <!-- <mat-hint>Include area code</mat-hint> -->
+                          </mat-form-field>
+                      </div>
+
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="example-container col-sm-12">
+                        <mat-form-field appearance="fill">
+                          <mat-label>Connectivity</mat-label>
+                          <select matNativeControl required>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                          </select>
+                        </mat-form-field>
+                      </div>
+
+                   </div>
+                   <div class="col-sm-4">
+                      <div class="example-container ">
+                            <p>Migaration b/w DCs
+                              <mat-icon aria-hidden="false" aria-label="Example home icon">contact_support</mat-icon>
+                            </p>
+                                                        
+                              <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button value="yes">Yes</mat-radio-button>
+                                &nbsp;&nbsp;&nbsp;
+                                <mat-radio-button value="no">No</mat-radio-button>
+                              </mat-radio-group>
+                          
+                        </div>
+
+                      </div>
+                  </div>
+
+
+                  <div class="row">
+                      <div class="col-sm-4">
+                              <div class="example-container col-sm-12">
+                              <mat-form-field appearance="fill">
+                                <mat-label>Migaration Specify Delivery</mat-label>
+                                <select matNativeControl required>
+                                  <option value="volvo">Volvo</option>
+                                  <option value="saab">Saab</option>
+                                  <option value="mercedes">Mercedes</option>
+                                  <option value="audi">Audi</option>
+                                </select>
+                              </mat-form-field>
+                            </div>
+
+                      </div>
+                        <div class="col-sm-4 example-container">
+                          <mat-form-field appearance="fill">                          
+                            <input matInput type="number">
+                            <span matPrefix>
+                              <mat-icon aria-hidden="false" class="icon" aria-label="Example home icon">add</mat-icon>
+                             &nbsp;</span>
+                            <mat-icon matSuffix>
+                              <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon">remove</mat-icon>
+                            </mat-icon>
+                            <mat-hint align="end"> #of Source Array required</mat-hint>
+                          </mat-form-field>
+
+                        </div>
+
+                  </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-6"></div>
+                        <div class="col-sm-3">
+                            <button  mat-raised-button color="primary"  matStepperPrevious>Back</button>
+                        </div>
+                        <div class="col-sm-3">
+                            <button  mat-raised-button color="primary"  matStepperNext>Next</button>
+                        </div>
+                       
+                      </div>
+                  </mat-step>
+
+
+
+                  <mat-step label="Server info">
+                    <h5>Server Information</h5>
+
+                    <div class="row">
+                      <div class="col-sm-4 example-container">
+                        <mat-form-field appearance="fill">                          
+                          <input matInput type="number">
+                          <span matSuffix>
+                            <mat-icon  aria-hidden="false" class="icon" aria-label="Example home icon">add</mat-icon>
+                            <mat-icon  aria-hidden="false" aria-label="Example home icon" class="icon">remove</mat-icon>
+                          </span>
+                            <mat-hint align="end"> #of ESX Hosts</mat-hint>
+                        </mat-form-field>
+
+                      </div>
+
+                      <div class="col-sm-4 example-container">
+                        <mat-form-field appearance="fill">                          
+                          <input matInput type="number">
+                          <span matSuffix>
+                            <mat-icon  aria-hidden="false" class="icon" aria-label="Example home icon">add</mat-icon>
+                            <mat-icon  aria-hidden="false" aria-label="Example home icon" class="icon">remove</mat-icon>
+                          </span>
+                            <mat-hint align="end"> #of VM Guests</mat-hint>
+                        </mat-form-field>
+
+                      </div>
+                      <div class="col-sm-4 example-container">
+                        <mat-form-field appearance="fill">                          
+                          <input matInput type="number">
+                          <span matSuffix>
+                            <mat-icon  aria-hidden="false" class="icon" aria-label="Example home icon">add</mat-icon>
+                            <mat-icon  aria-hidden="false" aria-label="Example home icon" class="icon">remove</mat-icon>
+                          </span>
+                            <mat-hint align="end"> #of Physical Servers(Windows)</mat-hint>
+                        </mat-form-field>
+
+                      </div>
+                      <div class="col-sm-4 example-container">
+                        <mat-form-field appearance="fill">                          
+                          <input matInput type="number">
+                          <span matSuffix>
+                            <mat-icon  aria-hidden="false" class="icon" aria-label="Example home icon">add</mat-icon>
+                            <mat-icon  aria-hidden="false" aria-label="Example home icon" class="icon">remove</mat-icon>
+                          </span>
+                            <mat-hint align="end"> #of Physical Workload (Unix,Linux)</mat-hint>
+                        </mat-form-field>
+
+                      </div>
+                      <div class="col-sm-4 example-container">
+                        <mat-form-field appearance="fill">                          
+                          <input matInput type="number">
+                          <span matSuffix>
+                            <mat-icon  aria-hidden="false" class="icon" aria-label="Example home icon">add</mat-icon>
+                            <mat-icon  aria-hidden="false" aria-label="Example home icon" class="icon">remove</mat-icon>
+                          </span>
+                            <mat-hint align="end"> Virtual Unix Workloads</mat-hint>
+                        </mat-form-field>
+
+                      </div>
+                      <div class="col-sm-4 example-container">
+                        <mat-form-field appearance="fill">                          
+                          <input matInput type="number">
+                          <span matSuffix>
+                            <mat-icon  aria-hidden="false" class="icon" aria-label="Example home icon">add</mat-icon>
+                            <mat-icon  aria-hidden="false" aria-label="Example home icon" class="icon">remove</mat-icon>
+                          </span>
+                            <mat-hint align="end"> #of SAN Ports</mat-hint>
+                        </mat-form-field>
+
+                      </div>
+
+
+                    </div>
+
+
+                    <br><br><br>
+                    <div class="row nas">
+                        <h5>NAS Capasity in (TB) </h5>
+
+                        <div class="row">
+                          <div class="col-sm-4">
+                              <div class="example-container">
+                                  <mat-form-field appearance="fill">
+                                    <mat-label>CIFS</mat-label>
+                                    <input matInput required>
+                                    <!-- <mat-hint>Include area code</mat-hint> -->
+                                  </mat-form-field>
+                              </div>
+
+                          </div>
+                          <div class="col-sm-4">
+                              <div class="example-container">
+                                  <mat-form-field appearance="fill">
+                                    <mat-label>NFS</mat-label>
+                                    <input matInput required>
+                                    <!-- <mat-hint>Include area code</mat-hint> -->
+                                  </mat-form-field>
+                              </div>
+
+                          </div>
+                          <div class="col-sm-4">
+                              <div class="example-container">
+                                  <mat-form-field appearance="fill">
+                                    <mat-label>Mixed</mat-label>
+                                    <input matInput required>
+                                    <!-- <mat-hint>Include area code</mat-hint> -->
+                                  </mat-form-field>
+                              </div>
+                          </div>
+
+                  </div>
+
+                    </div>
+
+                    <div class="row">
+                         <button  mat-raised-button color="primary" (click)="openDialog()" matStepperNext>Submit</button>
+                        
+                      </div>
+                  </mat-step>
+
+
+
+
+                <!-- Icon overrides. -->
+                <ng-template matStepperIcon="phone">
+                  <mat-icon>account_circle</mat-icon>
+                </ng-template>
+                <ng-template matStepperIcon="chat">
+                  <mat-icon>forum</mat-icon>
+                </ng-template>
+              </mat-horizontal-stepper>
+              
+        </mat-card>
+        </div>
+    
+    </div>    
+
+</app-layout>

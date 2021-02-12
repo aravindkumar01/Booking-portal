@@ -1,0 +1,71 @@
+
+<app-layout>
+    <mat-card>
+
+       <div class="row">
+                <div class="content col-sm-6">
+                        <br><br>
+                        <span class="heading"> <strong> Booking available</strong> </span>
+                        Welcome You! Just select and fill the details for booking.
+                </div>               
+         </div> 
+        <br><br><br>
+        
+
+
+
+
+             <div class="row">
+
+
+
+              <mat-card class="example-card" *ngFor="let hotel of hotels">
+                <mat-card-header>
+                 </mat-card-header>
+                <mat-card-content>
+                  
+
+                <div class="row">
+                  <div class="col-md-3">
+                      <img src="assets/hotel/{{hotel.imgPath}}" class="responsive">
+                  </div>
+                  <div class="col-md-6 ">
+                      <div class="list-title">
+                          <ol class="list-inline list-unstyled">
+                          <li class="list-inline-item"><a href="#"><h4>{{hotel.name}}</h4></a></li>
+                          <!-- <li class="list-inline-item text-warning" *ngFor="let  in  counter(hotel.star) ;let i = index">
+                              
+                            <i class="fa fa-star"></i>
+                           <i class="fa fa-star-half"></i></li>
+                          </li> -->
+                      </ol>
+                    </div>
+                      <div class="list-descrip">
+                        <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                        <small>{{hotel.address}}</small>  
+                      </div>
+                      
+                      
+                      
+                  </div>
+                  <div class="col-md-3 border-left card-body">
+                      <ul class="list-unstyled">
+                          <li><h3><b>{{hotel.overAllReview}}</b></h3></li>
+                          <li class="text-secondary"><small>{{hotel.totalReviews}} Reviews  </small></li>
+                      </ul>
+                      <button type="button" class="btn btn-outline-primary" (click)="gotoBooking(hotel.id)">Book Now</button>
+                  </div>
+              </div>
+
+                </mat-card-content>
+              </mat-card>
+
+
+        </div>
+            <!-- end card -->
+
+            <br><br>
+           
+
+  </mat-card>
+</app-layout>
